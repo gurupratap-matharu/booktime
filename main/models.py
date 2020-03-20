@@ -17,6 +17,8 @@ class ProductTag(models.Model):
     description = models.TextField(blank=True)
     active = models.BooleanField(default=True)
 
+    objects = ProductTagManager()
+
     def __str__(self):
         return self.name
 
