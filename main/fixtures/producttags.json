@@ -1,0 +1,119 @@
+[
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "horror",
+    "slug": "horror",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "fiction",
+    "slug": "fiction",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "Romance",
+    "slug": "romance",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "sci-fi",
+    "slug": "sci-fi",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "self-help",
+    "slug": "self-help",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "motivational",
+    "slug": "motivational",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "children",
+    "slug": "children",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "classic",
+    "slug": "classic",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "how-to-do",
+    "slug": "how-do",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "tutorial",
+    "slug": "tutorial",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "coffee-table",
+    "slug": "coffee-table",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "biography",
+    "slug": "biography",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.producttag",
+  "fields": {
+    "name": "autobio",
+    "slug": "autobio",
+    "description": "",
+    "active": true
+  }
+}
+]
