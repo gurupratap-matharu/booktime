@@ -8,7 +8,8 @@ from main import models
 
 class TestSignal(TestCase):
     def test_thumbnails_are_generated_on_save(self):
-        product = models.Product(name="The cathedral and the bazaar", price=Decimal("10.00"),)
+        product = models.Product(name="The cathedral and the bazaar",
+                                 price=Decimal("10.00"),)
         product.save()
 
         with open("main/fixtures/the-cathedral-the-bazaar.jpg", "rb") as f:
