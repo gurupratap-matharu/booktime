@@ -48,5 +48,5 @@ class TestForm(TestCase):
             form.send_mail()
 
         self.assertEqual(len(mail.outbox), 1)
-        self.assertEqual(mail.outbox[0].subject, 'Welcome to Booktime')
+        self.assertEqual(mail.outbox[0].subject, 'Welcome to BookTime')
         self.assertGreaterEqual(len(cm.output), 1)
