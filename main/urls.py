@@ -19,4 +19,5 @@ urlpatterns = [
     path("login/", auth_views.LoginView.as_view(template_name="login.html",
                                                 form_class=forms.AuthenticationForm), name="login"),
     path("add_to_basket/", views.add_to_basket, name="add_to_basket",),
+    path("basket/", views.manage_basket, name="basket"),
 ]
