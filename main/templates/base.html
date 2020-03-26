@@ -19,11 +19,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item {% if request.path == "/" %}active{% endif %}">
+                <li class="nav-item {% if request.path == '/' %}active{% endif %}">
                     <a class="nav-link" href="/">Home</a>
                 </li>
-                <li class="nav-item {% if request.path == "/about-us/" %}active{% endif %}">
-                    <a class="nav-link" href="/about-us/">About us</a>
+                <li class="nav-item {% if request.path == '/products/' %}active{% endif %}">
+                    <a class="nav-link" href="/products/all">Products</a>
+                </li>
+                <li class="nav-item {% if request.path == '/basket/' %}active{% endif %}">
+                    <a class="nav-link" href="/basket/">Basket</a>
+                </li>
+                <li class="nav-item {% if request.path == '/about-us/' %}active{% endif %}">
+                    <a class="nav-link" href="/about-us/">About</a>
+                </li>
+                <li class="nav-item {% if request.path == '/contact-us' %}active{% endif %}">
+                    <a class="nav-link" href="/contact-us/">Contact</a>
+                </li>
+                <li class="nav-item {% if request.path == '/login' %}active{% endif %}">
+                    <a class="nav-link" href="/login/">Login</a>
+                </li>
+                <li class="nav-item {% if request.path == '/sign-up' %}active{% endif %}">
+                    <a class="nav-link" href="/signup/">Sign Up</a>
                 </li>
             </ul>
         </div>
