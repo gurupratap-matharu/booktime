@@ -20,4 +20,6 @@ urlpatterns = [
                                                 form_class=forms.AuthenticationForm), name="login"),
     path("add_to_basket/", views.add_to_basket, name="add_to_basket",),
     path("basket/", views.manage_basket, name="basket"),
+    path("order/done/", TemplateView.as_view(template_name="order_done.html"), name="checkout_done"),
+    path("address-select/", views.AddressSelectionView.as_view(), name="address_select"),
 ]
