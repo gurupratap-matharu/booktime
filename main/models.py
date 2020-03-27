@@ -1,6 +1,7 @@
 import logging
 
 from django.contrib.auth.models import AbstractUser, BaseUserManager
+from django.core import exceptions
 from django.core.validators import MinValueValidator
 from django.db import models
 
