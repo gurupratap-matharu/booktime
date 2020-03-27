@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load render_bundle from webpack_loader %}
 {% block content %}
 <h1>Products</h1>
 <table class="table">
@@ -40,62 +40,28 @@
 {% endblock content %}
 
 {% block js %}
-<script src="https://unpkg.com/react@16/umd/react.production.min.js">
-</script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.
-min.js">
-</script>
-<style type="text/css" media="screen">
-    .image {
-        margin: 10px;
-        display: inline-block;
-    }
-</style>
+{% render_bundle 'imageswitcher' 'js' %}
 <script>
-    const e = React.createElement;
-    class ImageBox extends React.Component {
-        constructor(props) {
-            super(props);
-            this.state = {
-                currentImage: this.props.imageStart
-            }
-        }
-        click(image) {
-            this.setState({
-                currentImage: image
-            });
-        }
-        render() {
-            const images = this.props.images.map(
-                (i) => e('div', { className: "image", key: i.id },
-                    e('img', {
-                        onClick: this.click.bind(this, i),
-                        width: "100",
-                        src: i.thumbnail
-                    }),
-                ),
-            );
-            return e('div', { className: "gallery" },
-                e('div', { className: "current-image" },
-                    e('img', { src: this.state.currentImage.image })
-                ), images)
-        }
-    }
-
     document.addEventListener("DOMContentLoaded",
         function (event) {
             var images = [
                 {% for image in object.productimage_set.all %}
-                {
-            "image": "{{ image.image.url|safe }}",
-            "thumbnail": "{{ image.thumbnail.url|safe }}"
+            {
+            "image": "{{ image.image.url }}",
+            "thumbnail": "{{ image.thumbnail.url }}"
         },
         {% endfor %}
         ]
         ReactDOM.render(
-            e(ImageBox, { images: images, imageStart: images[0] }),
+            React.createElement(
+                ImageBox, {
+                images: images,
+                imageStart: images[0]
+            }
+            ),
             document.getElementById('imagebox')
         );
-    });
+    }
+    );
 </script>
 {% endblock %}
