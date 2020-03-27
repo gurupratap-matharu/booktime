@@ -11,6 +11,7 @@ autopep8 = "*"
 django = "*"
 pillow = "*"
 selenium = "*"
+django-webpack-loader = "*"
 
 [requires]
 python_version = "3.7"
