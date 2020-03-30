@@ -46,6 +46,7 @@ class ProductListView(ListView):
         if self.tag:
             products = models.Product.objects.active().filter(tag=self.tag)
         else:
+            logger.info('Veer retrieving all products...')
             products = models.Product.objects.active()
         return products.order_by("name")
 
