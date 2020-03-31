@@ -89,6 +89,17 @@ class ProductAdmin(admin.ModelAdmin):
             return self.prepopulated_fields
         return {}
 
+    def make_active(self, request, queryset):
+        queryset.update(active=True)
+
+    make_active.short_description = "Mark selected items as active"
+
+    def make_inactive(self, request, queryset):
+        queryset.update(active=False)
+
+    make_inactive.short_description = "Mark selected items as inactive"
+    actions = [make_active, make_inactive]
+
 
 admin.site.register(models.Product, ProductAdmin)
 
