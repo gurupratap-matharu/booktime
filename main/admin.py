@@ -318,7 +318,7 @@ class ReportingColoredAdminSite(ColoredAdminSite):
                         )
 
                 logger.info("most_bought_products query: %s", data.query)
-                label = [x["product_name"] for x in data]
+                labels = [x["product__name"] for x in data]
                 values = [x["c"] for x in data]
         else:
             form = PeriodSelectForm()
@@ -338,7 +338,11 @@ class ReportingColoredAdminSite(ColoredAdminSite):
         reporting_pages = [
             {
                 "name": "Orders per day",
-                "link": "ordders_per_day/",
+                "link": "orders_per_day/",
+            },
+            {
+                "name": "Most bought products",
+                "link": "most_bought_products/"
             }
         ]
         if not extra_content:
