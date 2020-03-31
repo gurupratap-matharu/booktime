@@ -303,7 +303,7 @@ class ReportingColoredAdminSite(ColoredAdminSite):
             labels=labels,
             values=values,
         )
-        return TemplateResponse(request, "order_per_day.html", context)
+        return TemplateResponse(request, "orders_per_day.html", context)
 
     def most_bought_products(self, request):
         if request.method == "POST":
