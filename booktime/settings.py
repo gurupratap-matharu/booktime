@@ -82,7 +82,7 @@ DJANGO_TABLES2_TEMPLATE = 'django_tables2/bootstrap.html'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
