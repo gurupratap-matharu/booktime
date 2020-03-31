@@ -1,0 +1,30 @@
+{% extends "admin/base.html" %}
+
+{% block title %}
+{{ title }} | {{ site_titel|default:_('Django site admin')}}
+{% endblock title %}
+
+{% block extrastyle %}
+<style type="text/css" media="screen">
+    #header {
+        background: {
+                {
+                site_header_color
+            }
+        }
+
+        ;
+
+    }
+
+    .module caption {
+        background: {
+                {
+                module_caption_color
+            }
+        }
+
+        ;
+    }
+</style>
+{% endblock extrastyle %}
