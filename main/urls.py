@@ -29,4 +29,5 @@ urlpatterns = [
     path("address-select/", views.AddressSelectionView.as_view(), name="address_select"),
     path("order-dashboard/", views.OrderView.as_view(), name="order_dashboard",),
     path("api/", include(router.urls)),
+    path("customer-service/<int:order_id>/", views.room, name="cs_chat"),
 ]
