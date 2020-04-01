@@ -1,8 +1,10 @@
 {% extends "admin/base_site.html" %}
 {% load i18n static %}
 
-{% block extrastyle %}{{ block.super }}
-<link rel="stylesheet" type="text/css" href="{% static "admin/css/dashboard.css" %}">{% endblock %}
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static "admin/css/dashboard.css" %}">
+{% endblock %}
 
 {% block coltype %}colMS{% endblock %}
 
@@ -24,8 +26,8 @@
                 <th>
                     <a href="{{ page.link }}">{{ page.name }}</a>
                 </th>
-                <td>$nbsp;</td>
-                <td>$nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
 
             </tr>
             {% endfor %}
