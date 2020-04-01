@@ -46,7 +46,6 @@ class ProductListView(ListView):
         if self.tag:
             products = models.Product.objects.active().filter(tag=self.tag)
         else:
-            logger.info('Veer retrieving all products...')
             products = models.Product.objects.active()
         return products.order_by("name")
 
@@ -205,3 +204,8 @@ class OrderView(UserPassesTestMixin, FilterView):
 
     def test_func(self):
         return self.request.user.is_staff is True
+
+
+def room(request, order_id):
+    context = {"room_name_json": str(order_id)}
+    return render(request, "chat_room.html", context)
