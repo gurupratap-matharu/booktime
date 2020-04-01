@@ -23,6 +23,9 @@ django-filter = "*"
 django-widget-tweaks = "*"
 djangorestframework = "*"
 weasyprint = "*"
+channels = "*"
+channels-redis = "*"
+aioredis = "*"
 
 [requires]
 python_version = "3.7"
