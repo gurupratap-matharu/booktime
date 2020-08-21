@@ -1,7 +1,7 @@
 {
   "name": "booktime",
   "version": "1.0.0",
-  "description": "",
+  "description": "An bookstore application",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -29,9 +29,9 @@
   "devDependencies": {
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "jest": "^25.2.3",
+    "jest": "^26.4.1",
     "webpack": "^4.42.1",
-    "webpack-bundle-tracker": "^0.4.3",
+    "webpack-bundle-tracker": "^1.0.0-alpha.1",
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
