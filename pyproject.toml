@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "booktime"
+version = "0.1.0"
+description = "An online book store"
+authors = ["Gurupratap Matharu <gurupratap.matharu@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.1.1"
+Pillow = "^9.2.0"
+selenium = "^4.4.3"
+django-webpack-loader = "^1.6.0"
+django-extensions = "^3.2.1"
+pydotplus = "^2.0.2"
+ipython = "^8.5.0"
+Werkzeug = "^2.2.2"
+factory-boy = "^3.2.1"
+django-debug-toolbar = "^3.6.0"
+django-tables2 = "^2.4.1"
+django-filter = "^22.1"
+django-widget-tweaks = "^1.4.12"
+djangorestframework = "^3.13.1"
+weasyprint = "^56.1"
+channels = "^3.0.5"
+channels-redis = "^3.4.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.8.0"
+flake8 = "^5.0.4"
+bandit = "^1.7.4"
+safety = "^2.1.1"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
